@@ -12,21 +12,9 @@
 */
 
 Route::get('/', function () {
-    $books = [
-        'Harry potter',
-        'laravel'
-    ];
-    return view('welcome')->withBooks(['books' => $books]);
+    return view('welcome');
 });
 
 Route::get('/todo', function () {
     return view('todo.todoList');
-});
-
-Route::get('/hello', function () {
-    return view('hello');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
 });
