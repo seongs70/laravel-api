@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::get('/todo', function () {
     return view('todo.todoList');
 });
+
+Route::Resource('/products','ProductController');
+Route::group(['prefix'=>'products'],function(){
+    Route::apiResource('/{product}/reviews','ReviewController');
+});
